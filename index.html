@@ -13,6 +13,7 @@
     <!-- build:css -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- endbuild -->
   </head>
 
@@ -54,17 +55,19 @@
 
           <div class="row">
             <div class="col-md-6" id="inputFieldsArea">
-
-              <strong>Item Price 
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">$</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Item Price">
-                <div class="input-group-append">
-                  <span class="input-group-text"></span>
-                </div>
-              </div>  
+              <div class="inputBlock">
+                <strong>Item Price</strong>
+                <div class="input-group mb-3 mr-2">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Item Price">
+                  <div class="input-group-append mr-2">
+                    <span class="input-group-text rounded-right"></span>
+                  </div>
+                  <button class="btn-danger rounded remove"><i class="fa fa-trash"></i></button>
+                </div> 
+              </div> 
               
             </div>
             <br /><br />
