@@ -12,8 +12,10 @@
 
     <!-- build:css -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <!-- endbuild -->
   </head>
 
@@ -54,28 +56,65 @@
         <div class="container">
 
           <div class="row">
-            <div class="col-md-6" id="inputFieldsArea">
-              <div class="inputBlock">
-                <strong>Item Price</strong>
-                <div class="input-group mb-3 mr-2">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">$</span>
-                  </div>
-                  <input type="text" class="form-control" aria-label="Item Price">
-                  <div class="input-group-append mr-2">
-                    <span class="input-group-text rounded-right"></span>
-                  </div>
-                  <button class="btn-danger rounded remove"><i class="fa fa-trash"></i></button>
+            <div class="col-md-6" >
+              <div id="inputFieldsArea">
+                <div class="inputBlock number1">
+                  <strong>Item Price</strong>
+                  <div class="input-group mb-3 mr-2">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Item Price">
+                    <div class="input-group-append mr-2">
+                      <span class="input-group-text rounded-right"></span>
+                    </div>
+                    <button class="btn-danger rounded remove"><i class="fa fa-trash"></i></button>
+                  </div> 
                 </div> 
-              </div> 
+              </div><!--#inputFieldsArea-->
+              <div>
+                <button class="btn btn-primary" id="addToListButton" type="submit">Add more items</button>
+              </div>
+              <br />
+              <br />
+              <div>
+                <button type="submit" id="calculateButton" class="btn btn-outline-primary btn-lg btn-block">Calculate Total<span class="glyphicon glyphicon-chevron-right"></span></button>
+              </div>
+              <br />
+              <br />
+            </div><!--col-md-6-->
+
+            <!--SECOND COLUMN STARTS-->
+            <div class="col-md-6">
               
+              <div class="details-list">
+                <div class="mt-1 mb-3">
+                  <h1 class="text-center">Total Cost: $200</h1>
+                  <hr style="width:85%"/>
+                </div>
+                <ul class="ml-1">
+                  <li><i class="far fa-dot-circle p-2"></i></i>Cost of items: $80</li>
+                  <li><i class="far fa-dot-circle p-2"></i></i>Tax: $8</li>
+                  <li><i class="far fa-dot-circle p-2"></i></i>Service Charge: $150</li>
+                  <li><i class="far fa-dot-circle p-2"></i></i>Shipping: $70</li>
+                </ul>
+              </div>
             </div>
             <br /><br />
-          </div>
-          <div>
-            <button class="btn btn-primary" id="addToListButton" type="submit">Add more items</button>
-          </div>
+          </div><!--row-->
+
+        </div><!--container-->
+     <!-- Footer -->
+      <footer class="footer bg-dark">
+        <div class="container text-center">
+          <div class='demopadding'>
+            <div class='icon social fb' ><a class="socialIcon" href="https://www.facebook.com/designerbagdepotph/" target="_blank"><i class='fab fa-facebook-f'></i></a></div>
+            <div class='icon social tw'><a class="socialIcon" href="https://www.instagram.com/designer_bags_depot/?hl=en" target="_blank"><i class='fab fa-instagram'></i></a></div>
+          </div>  
+
         </div>
+      </footer>
+
 
     <!-- build:js -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
