@@ -64,7 +64,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text">$</span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Item Price">
+                    <input type="number" class="form-control itemPrice" id="itemPrice" aria-label="Item Price">
                     <div class="input-group-append mr-2">
                       <span class="input-group-text rounded-right"></span>
                     </div>
@@ -72,6 +72,21 @@
                   </div> 
                 </div> 
               </div><!--#inputFieldsArea-->
+
+              <div class="shippingBlock">
+                  <strong>Shipping Cost</strong>
+                  <div class="input-group mb-3 mr-2">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input type="number" class="form-control shippingCost" aria-label="Shipping Price">
+                    <div class="input-group-append mr-2">
+                      <span class="input-group-text rounded-right"></span>
+                    </div>
+                    <button class="btn-primary rounded"><i class="fas fa-truck"></i></button>
+                  </div> 
+                </div> 
+
               <div>
                 <button class="btn btn-primary" id="addToListButton" type="submit">Add more items</button>
               </div>
@@ -89,14 +104,14 @@
               
               <div class="details-list">
                 <div class="mt-1 mb-3">
-                  <h1 class="text-center">Total Cost: $200</h1>
+                  <h1 class="text-center">Total Cost: $<span class=totalCost>200</span></h1>
                   <hr style="width:85%"/>
                 </div>
                 <ul class="ml-1">
-                  <li><i class="far fa-dot-circle p-2"></i></i>Cost of items: $80</li>
-                  <li><i class="far fa-dot-circle p-2"></i></i>Tax: $8</li>
-                  <li><i class="far fa-dot-circle p-2"></i></i>Service Charge: $150</li>
-                  <li><i class="far fa-dot-circle p-2"></i></i>Shipping: $70</li>
+                  <li><i class="far fa-dot-circle p-2"></i></i>Cost of items: $<span class="itemsCost">80</span></li>
+                  <li><i class="far fa-dot-circle p-2"></i></i>Tax: $<span class="tax">8</span></li>
+                  <li><i class="far fa-dot-circle p-2"></i></i>Service Charge: $<span class="serviceCharge">150</span></li>
+                  <li><i class="far fa-dot-circle p-2"></i></i>Shipping: $<span class="shipping">70</span></li>
                 </ul>
               </div>
             </div>

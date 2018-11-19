@@ -5,7 +5,7 @@ $( document ).ready(function() {
   $('#addToListButton').click(function() { 
   		total++;
 		console.log('Hello');
-		$('#inputFieldsArea').append('<div class="inputBlock number'+total+'"><strong>Item Price</strong><div class="input-group mb-3 mr-2"><div class="input-group-prepend"><span class="input-group-text">$</span></div><input type="text" class="form-control" aria-label="Item Price"><div class="input-group-append mr-2"><span class="input-group-text rounded-right"></span></div><button class="btn-danger rounded remove"><i class="fa fa-trash"></i></button></div></div>');
+		$('#inputFieldsArea').append('<div class="inputBlock number'+total+'"><strong>Item Price</strong><div class="input-group mb-3 mr-2"><div class="input-group-prepend"><span class="input-group-text">$</span></div><input type="number" class="form-control itemPrice" id="itemPrice" aria-label="Item Price"><div class="input-group-append mr-2"><span class="input-group-text rounded-right"></span></div><button class="btn-danger rounded remove"><i class="fa fa-trash"></i></button></div></div>');
 	}); 
 
   $('#inputFieldsArea').on('click', '.remove', function() {
@@ -13,6 +13,34 @@ $( document ).ready(function() {
 		$(this).closest('.inputBlock').remove();
 	});
 
+  $('#calculateButton').click(function(){
+  		console.log('Hello');
+  		var sum = 0; 
+  		console.log(sum);
 
+  		// console.log($("#itemPrice").val());
 
+  		$('.itemPrice').each(function(){
+  			sum += parseFloat($(this).val());
+  		});
+
+  		var shippingCost = parseFloat($('.shippingCost').val());
+
+  		var tax = sum * .10;
+  		var serviceCharge = (tax + sum) * .20;
+  		var totalCost = sum + tax + serviceCharge + shippingCost;
+  		console.log(tax);
+  		console.log(sum);
+  		$('.itemsCost').html(sum);
+  		$('.tax').html(tax);
+  		$('.shipping').html(shippingCost);
+  		$('.serviceCharge').html(serviceCharge);
+  		$('.totalCost').html(totalCost);
+  		 
+  		// $('input').find('#itemPrice').each(function(){
+  		// 	var itemPriceCost = $(this).val();
+  		// 	sum += itemPriceCost;
+  		// 	console.log(itemPriceCost);
+  		// });
+  });
 });
