@@ -21,14 +21,16 @@ $( document ).ready(function() {
   		// console.log($("#itemPrice").val());
 
   		$('.itemPrice').each(function(){
-  			sum += parseFloat($(this).val());
+  			if($(this).val()){
+  				sum += parseFloat($(this).val());
+  			}
   		});
 
   		var shippingCost = parseFloat($('.shippingCost').val());
 
-  		var tax = sum * .10;
-  		var serviceCharge = (tax + sum) * .20;
-  		var totalCost = sum + tax + serviceCharge + shippingCost;
+  		var tax = (sum * .10) * 56;
+  		var serviceCharge = ((tax + sum) * .20) * 56;
+  		var totalCost = (sum + tax + serviceCharge + shippingCost) * 56;
   		console.log(tax);
   		console.log(sum);
   		$('.itemsCost').html(sum);
