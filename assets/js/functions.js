@@ -26,7 +26,9 @@ $( document ).ready(function() {
   			}
   		});
 
-  		var shippingCost = parseFloat($('.shippingCost').val()) * 56;
+  		sum = sum * 56; 
+  		
+  		var shippingCost = parseFloat($('.shippingCost').val());
 
   		var tax = (sum * .10) * 56;
   		var serviceCharge = ((tax + sum) * .20) * 56;
