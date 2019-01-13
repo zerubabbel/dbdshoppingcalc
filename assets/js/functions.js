@@ -27,17 +27,23 @@ $( document ).ready(function() {
   		});
 
   		var shippingCost = parseFloat($('.shippingCost').val());
-
-  		var tax = (sum * .10) * 56;
-  		var serviceCharge = ((tax + sum) * .20) * 56;
-  		var totalCost = (sum + tax + serviceCharge + shippingCost) * 56;
+      sum = sum; 
+  		var tax = (sum * .10);
+      var costWithTax = sum + tax; 
+  		var serviceCharge = ((tax + sum) * .20);
+      var subtotalDollar = sum + tax + serviceCharge;
+      var subtotalPeso = subtotalDollar * 55;
+  		var totalCost = ((sum + tax + serviceCharge) * 55) + shippingCost;
   		console.log(tax);
   		console.log(sum);
-  		sum = sum * 56; 
+  		
   		$('.itemsCost').html(sum);
   		$('.tax').html(tax);
+      $('.costWithTax').html(costWithTax);
   		$('.shipping').html(shippingCost);
   		$('.serviceCharge').html(serviceCharge);
+      $('.subtotalDollar').html(subtotalDollar);
+      $('.subtotalPeso').html(subtotalPeso);
   		$('.totalCost').html(totalCost);
   		 
   		// $('input').find('#itemPrice').each(function(){
